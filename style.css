@@ -1,0 +1,45 @@
+body {
+    display: grid;
+    grid-template-rows: 12% 7% 35% 30% 11%;
+    grid-template-columns: 75% 25%;
+    width: 800px;
+    height: 600px;
+    border: 1px solid pink;
+}
+header {
+    background: grey;
+    padding: .5rem 0 3rem .5rem;
+    max-height: 25%;
+    border: 1px solid red;
+}
+.nav-bar {
+    color: greenyellow;
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border: 1px solid yellow;
+    margin-top: -10px;
+}
+
+
+main {
+    max-width: 75%;
+    border: 1px solid greenyellow;
+    display: inline-block;
+    background-color: lightblue;
+}
+
+aside {
+    display: inline-block;
+    border: 1px solid white;
+    max-width: 25%;
+    background-color: lightgreen;
+}
+
+footer {
+    text-align: center;
+    background-color: grey;
+}
