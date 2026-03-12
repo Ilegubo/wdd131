@@ -1,0 +1,70 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 20% 70% 10%;
+    width: 800px;
+    height: 650px;
+    border: 2px seagreen solid;
+}
+
+header {
+    border: 2px yellow solid;
+    color: white;
+}
+#course-title{
+    background-color:#1d4d72 ;
+    text-align: center;
+    font-weight: bold ;
+    display: block;
+    padding: .8rem;
+    margin-bottom: 0;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: grey;
+    padding:.5rem;
+    border: 2px green solid;
+}
+
+header nav ul li, nav ul li a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+main {
+    display: grid;
+    grid-template-rows: 10% 30% 40%;
+    border: 2px solid black;
+}
+
+main h1 {
+    margin-top: 1rem;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.card1 h2 {
+    text-align: center;
+    background-color: #1d4d72;
+    padding: .5rem;
+    color: white;
+}
+
+.card2 h2 {
+    text-align: center;
+}
+.profile-picture {
+    width: 8rem;
+    float: right;
+}
+.independence-square {
+    max-width: 8rem;
+    float: left;
+    margin: 1rem;
+}
