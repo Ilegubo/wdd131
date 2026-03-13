@@ -41,9 +41,11 @@ nav a {
 
 nav a:hover {
     color:darkslategray;
+    background-color:khaki;
     font-weight: bold;
     border: 2px solid white;
-    border-radius: .1rem;
+    border-radius: 1rem;
+    padding: .5rem;
 }
 
 #course-title {
