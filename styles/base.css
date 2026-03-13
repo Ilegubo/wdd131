@@ -123,6 +123,7 @@ img {
 }
 
 .card2 h2 {
+    margin-left: -.3rem;
     background-color: #1d4d72;
     color: white;
     padding: .5rem;
