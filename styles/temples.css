@@ -71,11 +71,10 @@
         margin: 0;
         border: none;
         background: transparent;
-        float: right;
 }
 
 .ham-menu span {
-    height: .1rem; /* Set a thin height for a "line" look */
+    height: .1rem;
     width: 50%;
     background-color: black;
     position: absolute;
@@ -83,7 +82,6 @@
     transition: .3s ease;
 }
 
-/* Position the three lines manually */
 .ham-menu span:nth-child(1) { top: 20%; }
 .ham-menu span:nth-child(2) { top: 30%; }
 .ham-menu span:nth-child(3) { top: 40%; }
@@ -91,6 +89,12 @@
     main {
         max-width: 90%;
         margin: 0 auto;
+        display: grid;
+    }
+
+    #figure-images {
+        display: grid;
+        grid-template-columns: repeat(1fr, 10);
     }
 
     main h1 {
@@ -118,5 +122,9 @@
             text-align: center;
             color: darkslateblue;
             margin-bottom: .5rem;
+        }
+
+        footer p {
+            text-align: center;
         }
 }
