@@ -8,14 +8,20 @@
     }
 
     #heading {
-        display: block;
+        display: inline-block;
         text-align: center;
         font-weight: bolder;
-        margin: .5rem;
-        padding: .5rem;
-        background-color: #007acc;
+        /* margin: .2rem; */
+        margin-left: 1rem;
+        /* padding-top: 1rem; */
+        /* padding: .5rem; */
         border-radius: .3rem;
         color: white;
+        border: .5rem solid black;
+    }
+
+    header {
+        background-color: #007acc;
     }
 
     #nav-bar {
@@ -55,28 +61,27 @@
     }
 
     .ham-menu {
+        display: inline-block;
     height: 3rem;
     width: 2.5rem; /* Slightly wider for better tap area */
-    margin-left: auto;
+    margin-right: .5rem;
     cursor: pointer;
-    position: relative; /* Essential for absolute children */
+    position: relative;
 }
 
 .ham-menu span {
-    height: 4px; /* Set a thin height for a "line" look */
-    width: 100%;
-    background-color: #007acc;
+    height: .1rem; /* Set a thin height for a "line" look */
+    width: 50%;
+    background-color: white;
     position: absolute;
     left: 0;
     transition: .3s ease;
-    font-size: large;
-    font-weight: bolder;
 }
 
 /* Position the three lines manually */
 .ham-menu span:nth-child(1) { top: 20%; }
-.ham-menu span:nth-child(2) { top: 50%; }
-.ham-menu span:nth-child(3) { top: 80%; }
+.ham-menu span:nth-child(2) { top: 30%; }
+.ham-menu span:nth-child(3) { top: 40%; }
 
     main {
         max-width: 90%;
