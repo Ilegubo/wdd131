@@ -94,7 +94,10 @@
 
     #figure-images {
         display: grid;
-        grid-template-columns: repeat(1fr, 10);
+        grid-template-rows: repeat(9, .1fr);
+        gap: .1rem solid black;
+        border: .1rem;
+        border: .3rem solid black;
     }
 
     main h1 {
