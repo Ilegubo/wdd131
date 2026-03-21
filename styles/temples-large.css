@@ -15,6 +15,7 @@
     grid-template-columns: 1fr 0.5fr;
     justify-content: space-evenly;
     background-color: #007acc;
+    color: white;
     max-width: 90%;
     height: 4rem;
     padding: 1rem;
@@ -25,6 +26,7 @@
   #heading {
     font-weight: bolder;
     font-size: larger;
+    color: white;
   }
 
   #menu-button {
@@ -47,18 +49,33 @@
 
   main h2 {
     max-width: 80%;
-    margin: 0 auto;
+    margin: 2rem auto;
     text-align: center;
     font-size: 2rem;
   }
 
   #figure-images {
+    max-width: 90%;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(1fr, 3);
-    grid-template-rows: repeat(1fr, 3);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 
   img {
-    max-width: 200px;
+    max-width: 300px;
+  }
+
+  figure {
+    text-align: center;
+  }
+
+  footer {
+    max-width: 90%;
+    height: 4rem;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 13rem;
+    background-color: #007acc;
   }
 }
