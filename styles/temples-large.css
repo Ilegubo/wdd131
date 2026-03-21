@@ -5,4 +5,60 @@
     box-sizing: border-box;
     font-size: large;
   }
+
+  body {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    justify-content: space-evenly;
+    background-color: #007acc;
+    max-width: 90%;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+
+  #heading {
+    font-weight: bolder;
+    font-size: larger;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  #nav-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #nav-bar a {
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  #nav-bar li {
+    list-style-type: none;
+  }
+
+  main h2 {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  #figure-images {
+    display: grid;
+    grid-template-columns: repeat(1fr, 3);
+    grid-template-rows: repeat(1fr, 3);
+  }
+
+  img {
+    max-width: 200px;
+  }
 }
