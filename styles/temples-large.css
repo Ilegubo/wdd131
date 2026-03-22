@@ -39,6 +39,13 @@
     justify-content: space-evenly;
   }
 
+  #nav-bar a:hover {
+    color: #0d1a29;
+    background-color: #009688;
+    border: .1rem solid #009688;
+    border-radius: .2rem;
+  }
+
   #nav-bar a {
     text-decoration: none;
     font-size: 1.3rem;
@@ -47,6 +54,7 @@
 
   #nav-bar li {
     list-style-type: none;
+    padding: .2rem;
   }
 
   main h2 {
@@ -62,7 +70,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: .5rem .1rem;
+    gap: .5rem .05rem;
   }
 
   img {
