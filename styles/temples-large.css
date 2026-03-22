@@ -76,7 +76,12 @@
     height: 4rem;
     margin-top: 2rem;
     text-align: center;
-    font-size: 13rem;
+    font-size: 3rem;
     background-color: #007acc;
+  }
+
+  footer p, footer span {
+    padding-top: .2rem;
+    font-size: 1.3rem;
   }
 }
