@@ -30,7 +30,7 @@
     flex-direction: column;
     background-color: #c2e7ff;
     color: #55345d;
-    width: 5rem;
+    /* width: 5rem; */
     height: auto;
     position: fixed;
     top: 5%;
