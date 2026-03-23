@@ -120,7 +120,8 @@
 
    figure img {
     margin-left: 1.5rem;
-    max-width: 85%;
+    width: 85%;
+    height: auto;
     height: auto;
   }
 
