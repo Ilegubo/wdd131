@@ -118,7 +118,7 @@
     max-width: fit-content;
   }
 
-  .temple-image {
+   figure img {
     margin-left: 1.5rem;
     max-width: 85%;
     height: auto;
