@@ -29,18 +29,19 @@
     display: flex;
     flex-direction: column;
     background-color: #c2e7ff;
-    color: #55345d;
+    color: black;
     /* width: 5rem; */
     height: auto;
     position: fixed;
     top: 5%;
-    right: -200px;
+    right: -100px;
     transition: 0.3s ease;
     z-index: 1000;
     justify-content: space-evenly;
 
     margin: 1rem 0;
     flex-wrap: wrap;
+    width: 50%;
   }
 
   #nav-bar.active {
@@ -56,6 +57,13 @@
     border-radius: 0.3rem;
     font-weight: bold;
     padding: 0 0.5rem;
+  }
+
+  #nav-bar a {
+    text-decoration: none;
+    display: block;
+    padding: .5rem;
+    color: black;
   }
 
   .ham-menu {
@@ -79,13 +87,13 @@
   }
 
   .ham-menu span:nth-child(1) {
-    top: 20%;
+    top: 40%;
   }
   .ham-menu span:nth-child(2) {
-    top: 30%;
+    top: 50%;
   }
   .ham-menu span:nth-child(3) {
-    top: 40%;
+    top: 60%;
   }
 
   main {
