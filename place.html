@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Like Accra</title>
+    <meta name="description" content="...">
+    <meta name="author" content="Ilegubo Kofi Owusu">
+    <link rel="stylesheet" href="./styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <script scr="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Greater Accra</h1>
+    </header>
+    <main>
+        <picture class="background-image">
+            <source srcset="images/accra-large.webp" media="(min-width: 100px)">
+            <source srcset="images/accra-small.webp" media="(min-width: 500px)">
+            <img scr="images/accra-small.webp" alt="Accra Independence Square">
+        </picture>
+        <div class="data">
+            <h2>Data</h2>
+            <p><b>Area</b><span>225.7 km²</span></p>
+            <p><b>Population</b><span>2,861,000</span></p>
+            <p><b>Capital</b><span>Accra</span></p>
+            <p><b>Languages</b><span>English, Ga, Twi</span></p>
+            <p><b>Currency</b><span>Ghana Cedi</span></p>
+            <p><b>Time Zone</b><span>UTC + 0</span></p>
+            <p><b>Calling Code</b><span>+233</span></p>
+            <p><b>Internet TLD</b><span>.gh</span></p>
+        </div>
+        <div class="weather">
+            <h2>Weather</h2>
+            <img id="weather-emoticon" src="images/weather.svg" alt="weather-icon">
+            <p><b>Temperature</b></p>
+            <p><b>Conditions</b></p>
+            <p><b>Wind</b></p>
+            <p><b>Wind Chill</b></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;⚽Ilegubo Kofi Owusu ⚽ Accra-Ghana</p>
+        <p id="last-modified"></p>
+    </footer>
+
+</body>
+
+</html>
