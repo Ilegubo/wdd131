@@ -1,3 +1,3 @@
 const lastModified = new Date(document.lastModified)
-document.querySelector('#year').textContent = lastModified.getFullYear();
-document.querySelector('#last-modified') = `Last Modification: ${lastModified.toLocaleString}`;
+document.getElementById('year').textContent = lastModified.getFullYear();
+document.getElementById('last-modified').textContent = `Last Modification: ${lastModified.toLocaleString()}`;
