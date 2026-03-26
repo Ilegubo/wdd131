@@ -36,8 +36,8 @@
         top: 10%;
         left: 1rem;
         border-radius: 1rem;
-        min-width: 22%;
-        max-width:36%;
+        min-width: 23%;
+        max-width:40%;
         /* display: grid; */
         /* grid-template-columns: .7fr 1.3fr; */
         border: .1rem solid var(--red-color);
@@ -60,6 +60,8 @@
     .data p, .weather p {
         margin-bottom: 1rem;
         /* grid-column: 1; */
+        display: grid;
+        grid-template-columns: 0.9fr 1.3fr;
     }
 
     .data b::after, .weather b::after {
@@ -67,7 +69,7 @@
     }
     
     .data span, .weather span {
-        margin-left: 1rem;
+        margin-left: .2rem;
         text-align: left;
     }
 
