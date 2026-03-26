@@ -41,15 +41,17 @@
     }
 
     .data b::after, .weather b::after {
-        content: ":"
+        content: ":";
     }
     
     .data span, .weather span {
+        margin-left: 1rem;
         text-align: left;
         display: block;
     }
 
     .data b, .weather b {
+        margin-right: .1rem;
         text-align: right;
         display: block;
     }
