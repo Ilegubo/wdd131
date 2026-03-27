@@ -69,10 +69,14 @@
         display: block;
     }
     
-    #weather-emoticon {
+    .weather-svg {
         display: block;
-        width: 75px;
+        max-width: 40px;
         margin: .5rem auto;
+    }
+
+    .weather span {
+        display: none;
     }
 
     footer {

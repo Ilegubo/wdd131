@@ -51,7 +51,7 @@
         top: 60%;
         right: 2rem;
         border-radius: 1rem;
-        min-width: 27%;
+        width: 20%;
         /* display: grid; */
         /* grid-template-columns: .7fr 1.3fr; */
         border: .1rem solid var(--red-color);
@@ -61,7 +61,7 @@
         margin-bottom: 1rem;
         /* grid-column: 1; */
         display: grid;
-        grid-template-columns: 0.9fr 1.3fr;
+        grid-template-columns: repeat(2, 1.2fr);
     }
 
     .data b::after, .weather b::after {
@@ -89,6 +89,7 @@
 
     .weather h2 {
         text-align: left;
+        padding-left: .5rem;
     }
 
     .background-image img {
@@ -96,13 +97,20 @@
         min-height: 300px;
     }
 
-    .weather img {
-        max-width: 30px;
+    .weather-svg {
+        /* max-width: 30px;
         display: block;
         margin: 0 auto;
         position: absolute;
         right: .5rem;
-        top: 0;
+        top: 0; */
+        display: none;
+    }
+
+    .weather-emoticon {
+        position: absolute;
+        right: 4rem;
+        top: .5rem;
     }
 
     footer {
