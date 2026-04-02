@@ -1,4 +1,3 @@
-// 1. Data Array
 const temples = [
     {
         templeName: "Aba Nigeria",
@@ -73,23 +72,19 @@ const temples = [
     
 ];
 
-// 2. DOM Elements
 const templeContainer = document.querySelector("#figure-images");
 const filterTitle = document.querySelector("#filter-title");
 const hamButton = document.querySelector('#menu-button');
 const navBar = document.querySelector('#nav-bar');
 
-// 3. Hamburger Menu Logic
 hamButton.addEventListener('click', () => {
     navBar.classList.toggle('active');
     hamButton.classList.toggle('open');
 });
 
-// 4. Footer Dates
 document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 document.getElementById("copy-right-year").textContent = new Date().getFullYear();
 
-// 5. Display Function
 function createTempleCards(filteredTemples) {
     templeContainer.innerHTML = "";
     
@@ -109,8 +104,7 @@ function createTempleCards(filteredTemples) {
         const img = document.createElement("img");
         img.setAttribute("src", temple.imageUrl);
         img.setAttribute("alt", `${temple.templeName} Temple`);
-        img.setAttribute("loading", "lazy"); // Critical for performance
-        
+        img.setAttribute("loading", "lazy");
         card.appendChild(name);
         card.appendChild(img);
         card.appendChild(info);
