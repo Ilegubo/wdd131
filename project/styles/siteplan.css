@@ -101,7 +101,8 @@ tbody tr:nth-child(4):hover {
 
 #wireframes {  
     display: grid;
-    grid-template-columns: 1.4fr 0.6fr;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: .5rem;
 }
 #wireframes-large img {
     max-width: 400px;
