@@ -1,0 +1,28 @@
+form
+put inputs in div to make them block level.
+
+form arguments(method, action)
+
+form elements:   div(label, input)
+
+form arguments:  for(label-ID, ltd to html)
+		 type(submit, data, text, password, 		 radio, checkbox, file, email Tel)
+
+		 Imp: type="number" can have 			 min="" and max="" arguments
+		 *required
+		 
+		 radio buttons must have name=""
+		 in order for them to belong to 		 the same group.
+		 In addition, they must have 			 value=""
+		 wrap the radio button in the 			 label>
+
+Select types use <select></select> as an element and <option></option> as the sub-elements.
+eg. 
+<label for="payment">Payment</label>
+<select id="payment" name="payment">
+<option value="visa">Visa</option>
+<option value="mastercard">mastercard</option>
+<option value="giftcard">giftcard</option>
+
+
+type, name, value, placeholder, required

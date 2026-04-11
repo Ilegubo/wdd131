@@ -1,0 +1,96 @@
+* {
+    font-family: monospace;
+    --background-color: hsl(197, 71%, 73%);
+    --primary-color: hsl(204, 100%, 40%);
+    --tertiary-color: hsl(0, 0%, 83%);
+    --required: hsl(16, 100%, 50%);
+    --valid: hsl(120, 100%, 20%);
+
+}
+
+body {
+    font-size: 20px;
+    margin: 0 auto;
+    max-width: 520px;
+}
+
+main {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+h1 {
+    background-color: var(--primary-color);
+    text-align: center;
+    padding: .5rem;
+}
+
+fieldset {
+    margin-top: .5rem;
+}
+
+form {
+    background-color: var(--tertiary-color);
+    padding: 1rem .5rem;
+    margin-bottom: 1rem;
+}
+
+form input:required {
+    border-right: .5rem solid var(--required);
+}
+
+form input:required:valid {
+    border-right: .5rem solid var(--valid);
+}
+
+#prating {
+    display: inline;
+    background-color: var(--background-color);
+}
+
+#review {
+    width: 400px;
+}
+
+.product-rating label {
+    display: block;
+    color: goldenrod;
+    font-size: larger;
+}
+
+.product-rating input {
+    display: inline;
+}
+
+input {
+    display: block;
+    padding-top: .5rem;
+    border-radius: 5px;
+    padding: .5rem;
+}
+
+input[type="text"], input[type="submit"]{
+    width: 100%;
+    max-width: 400px;
+}
+
+input[type="textarea"]{
+    width: 100%;
+    max-width: 400px;
+}
+
+input[type="submit"]{
+    background-color: var(--primary-color);
+    border: none;
+    font-weight: bolder;
+    font-size: larger;
+    margin: 1rem auto;
+}
+
+footer {
+    background-color: var(--primary-color);
+    margin: .5rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+    text-align: center;
+}
