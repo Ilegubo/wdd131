@@ -19,66 +19,60 @@
     <main>
         <form method="get" action="review.html">
             <fieldset>
-                <label for="pname">
+                <label for="pname">Product Name
                     <select id="pname" name="pname" required>
-                        <option disabled selected>Select a Product...</option>
-                        <!-- Input code to dynamically place product items -->
-                    </select>
+                        <option disabled selected value="">Select a Product...</option>
+                        </select>
                 </label>
             </fieldset>
 
             <fieldset>
                 <div class="product-rating">Product Rating
-                    <label for="prating" id="onestar"><input type="radio" name="prating" value="onestar">&star;</label>
-                    <label for="prating" id="twostar"><input type="radio" name="prating"
-                            value="twostar">&star;&star;</label>
-                    <label for="prating" id="threestar"><input type="radio" name="prating"
-                            value="threestar">&star;&star;&star;</label>
-                    <label for="prating" id="fourstar"><input type="radio" name="prating"
-                            value="fourstar">&star;&star;&star;&star;</label>
-                    <label for="prating" id="fivestar"><input type="radio" name="prating"
-                            value="fivestar">&star;&star;&star;&star;&star;</label>
+                    <label><input type="radio" name="prating" value="onestar">&star;</label>
+                    <label><input type="radio" name="prating" value="twostar">&star;&star;</label>
+                    <label><input type="radio" name="prating" value="threestar">&star;&star;&star;</label>
+                    <label><input type="radio" name="prating" value="fourstar">&star;&star;&star;&star;</label>
+                    <label><input type="radio" name="prating" value="fivestar">&star;&star;&star;&star;&star;</label>
                 </div>
             </fieldset>
+
             <fieldset>
-                <label for="installationDate" id="installation-date">Installation Date* <input type="date"
-                        name="installationDate" required></label>
-            </fieldset>
-            <fieldset><label for="usefulFeatures">Useful Features
-                    <input type="checkbox" name="usefulFeatures" value="">
-                    <input type="checkbox" name="usefulFeatures" value="">
-                    <input type="checkbox" name="usefulFeatures" value="">
-                    <input type="checkbox" name="usefulFeatures" value="">
-                    <input type="checkbox" name="usefulFeatures" value="">
-                    <input type="checkbox" name="usefulFeatures" value="">
-                    <input type="checkbox" name="usefulFeatures" value="">
-                    <input type="checkbox" name="usefulFeatures" value="">
-                </label></fieldset>
-            <fieldset>
-                <label for="writtenReview" id="review">
-                    <input type="textarea" name="writtenReview" placeholder="Write a review">
+                <label for="installationDate">Installation Date* <input type="date" id="installationDate" name="installationDate" required>
                 </label>
             </fieldset>
+
             <fieldset>
-                <label for="userName" id="userName">User name
-                    <input type="text" name="userName">
+                <label>Useful Features
+                    <input type="checkbox" name="usefulFeatures" value="feature1">
+                    <input type="checkbox" name="usefulFeatures" value="feature2">
+                    <input type="checkbox" name="usefulFeatures" value="feature3">
                 </label>
             </fieldset>
-            <label for="submisEntries" id="submitEntries">Submit My Information
-                <input type="submit" name="submissionEntries">
-            </label>
+
+            <fieldset>
+                <label for="writtenReview">Review
+                    <textarea id="writtenReview" name="writtenReview" placeholder="Write a review"></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label for="userName">User name
+                    <input type="text" id="userName" name="userName">
+                </label>
+            </fieldset>
+
+            <input type="submit" id="submitEntries" value="Submit My Information">
 
         </form>
     </main>
     <footer>
         <p>
-            &copy;<span id="copy-right-year">|</span>
+            &copy;<span id="copy-right-year"></span>
             <span>Ilegubo Kofi Owusu |</span>
             <span>The Republic of Ghana |</span>
         </p>
         <p id="lastModified"></p>
     </footer>
-
 </body>
 
 </html>
