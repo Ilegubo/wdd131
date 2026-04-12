@@ -37,3 +37,28 @@ products.forEach(product => {
     option.textContent = product.name;
     document.querySelector("#pname").appendChild(option);
 });
+
+
+function getReviewCount() {
+    const count = localStorage.getItem('reviewCount');
+    return count ? parseInt(count, 10) : 0;
+}
+
+function incrementReviewCount() {
+    const currentCount = getReviewCount();
+    const newCount = currentCount + 1;
+    localStorage.setItem('reviewCount', newCount.toString());
+    return newCount;
+}
+
+document.getElementById('reviewForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const reviewText = document.getElementById('reviewTextarea').value.trim();
+    
+    if (reviewText !== '') {
+
+        const totalReviews = incrementReviewCount();
+        console.log(`Total reviews given: ${totalReviews}`);
+    }
+});
