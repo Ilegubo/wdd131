@@ -87,6 +87,11 @@ input[type="submit"]{
     margin: 1rem auto;
 }
 
+input[type="checkbox"]{
+    display: inline-block;
+    text-align: right;
+}
+
 footer {
     background-color: var(--primary-color);
     margin: .5rem auto;
