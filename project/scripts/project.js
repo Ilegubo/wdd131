@@ -13,7 +13,7 @@ const missions = [
         name : "Ghana Accra East Mission",
         president : "Ben Beeson",
         wife : "Julynn Beeson",
-        imageUrl: "images/ae-mission",
+        imageUrl: "images/ae-president.webp",
         geoLocation: "Accra",
         closestTemple: "Ghana Accra Temple"
     },
@@ -109,16 +109,17 @@ function createCards(dataItem, dataContainer){
         image.setAttribute("loading", "lazy");
 
         if (dataItem === temples) {
-            info.innerHTML = `<p><span class="label">Name</span>: ${item.name}
+            info.innerHTML = `<div class="caption"><p><span class="label">Name</span>: ${item.name}
             <p><span class="label">President</span>: ${item.president}
             <p><span class="label">Wife</span>: ${item.wife}
             <p><span class="label">Location</span>: ${item.geoLocation}
-            <p><span class="label">Area</span>: ${item.area}`
+            <p><span class="label">Area</span>: ${item.area}</div>`
         } else {
-            info.innerHTML = `<p><span class="label">Name</span>: ${item.name}
+            info.innerHTML = `<div class="caption"><p><span class="label">Name</span>: ${item.name}
             <p><span class="label">President</span>: ${item.president}
             <p><span class="label">Wife</span>: ${item.wife}
-            <p><span class="label">Geo-Location</span>: ${item.geoLocation}`
+            <p><span class="label">Geo-Location</span>: ${item.geoLocation}
+            </div>`
         }
 
         card.appendChild(image);
