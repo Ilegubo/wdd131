@@ -13,7 +13,7 @@ const missions = [
         name : "Ghana Accra East Mission",
         president : "Ben Beeson",
         wife : "Julynn Beeson",
-        imageURL: "",
+        imageUrl: "images/ae-mission",
         geoLocation: "Accra",
         closestTemple: "Ghana Accra Temple"
     },
@@ -21,7 +21,7 @@ const missions = [
         name : "Ghana Accra North Mission",
         president : "Daren ALovell",
         wife : "Cami Lovell",
-        imageURL: "",
+        imageUrl: "images/an-mission.webp",
         geoLocation: "Accra",
         closestTemple: "Ghana Accra Temple"
     },
@@ -29,7 +29,7 @@ const missions = [
         name : "Ghana Accra West Mission",
         president : "K. Erik Jacobsen",
         wife : "Renee M. Jacobsen",
-        imageURL: "",
+        imageUrl: "images/aw-mission.webp",
         geoLocation: "Accra",
         closestTemple: "Ghana Accra Temple"
     },
@@ -37,7 +37,7 @@ const missions = [
         name : "Ghana Accra Cape Coast Mission",
         president : "Kojo Tachie-Menson",
         wife : "Ann Tachie-Menson",
-        imageURL: "",
+        imageUrl: "images/cc-mission.webp",
         geoLocation: "Accra",
         closestTemple: "Ghana Accra Temple"
     },
@@ -45,7 +45,7 @@ const missions = [
         name : "Ghana Takoradi Mission",
         president : "Jacob Helland",
         wife : "Janet Beck Helland",
-        imageURL: "",
+        imageUrl: "images/tk-mission.webp",
         geoLocation: "Takororadi",
         closestTemple: "Ghana Kumasi Temple"
     },
@@ -53,7 +53,7 @@ const missions = [
         name : "Ghana Kumasi Mission",
         president : "Alex Boateng",
         wife : "Anita Boateng",
-        imageURL: "",
+        imageUrl: "images/km-mission.webp",
         geoLocation: "Kumasi",
         closestTemple: "Ghana Kumasi Temple"
     }    
@@ -63,59 +63,75 @@ const missions = [
 // object for temples card
 const temples = [
     {
-        templeName: "Ghana Accra",
-        location: "Cantonments",
+        name: "Ghana Accra",
+        president: "Anthony Mua Kaku",
+        wife: "Doe Akua Afriyie Awudetsey Kaku",
+        geoLocation: "Cantonments",
         dedicated: "2004, January, 11",
         area: 17500,
-        imageUrl: "images/accra-ghana-temple.jpg"
+        imageUrl: "images/accra-ghana.webp"
     },
     {
-        templeName: "Ghana Kumasi",
-        location: "Y11 Suntreso Road, Bantama Kumasi",
+        name: "Ghana Kumasi",
+        president: null,
+        wife: null,
+        geoLocation: "Y11 Suntreso Road, Bantama Kumasi",
         dedicated: "Still Under Construction",
-        area: 17500,
-        imageUrl: "images/accra-ghana-temple.jpg"
+        area: null,
+        imageUrl: "images/ghana-flag.webp"
     },
     {
-        templeName: "Ghana Cape Coast",
-        location: "Cape Coast",
+        name: "Ghana Cape Coast",
+        president: null,
+        wife: null,
+        geoLocation: "Cape Coast",
         dedicated: "Still Under Construction",
-        area: 17500,
-        imageUrl: "images/accra-ghana-temple.jpg"
+        area: null,
+        imageUrl: "images/ghana-flag.webp"
     }    
 ]
 
-// function to create temples card
-function createTempleCards(temples){
-    imgContainer = document.querySelector(".dynamic-temples")
-    card = document.createElement("figure");
-    img = document.createElement("img");
+// function to create temples/missions cards
 
-    temples.foreach(temple => {
-        // name of mission
-        const name = document.createElement("h4");
-        card.appendChild(name);
+function createCards(dataItem, dataContainer){
+    const container = document.querySelector(dataContainer)
+    if (!dataContainer) return;
+    container.innerHTML = "";
 
-        name.textContent = temple.name;
-        img.setAttribute("src", temple.imageURL);
-        img.setAttribute("alt", temple.name);
-        img.setAttribute("loading", "lazy");
-        card.appendChild(img);
+    dataItem.forEach(item => {
+        const card = document.createElement("figure");
+        const image = document.createElement("img");
+        const info = document.createElement("figcaption");
+
+        image.setAttribute("src", item.imgUrl)
+        image.setAttribute("alt", img.name);
+        image.setAttribute("loading","lazy");
         
-        // info: name, date completed, current president, geolocation
-        const info = document.createElement("figcaption")
-        info.innerHTML(`<p><b>${temple.name}</b>
-            <p><span class="label">Location</span>
-            <p><span class="label">President</span>:${temple.president}
-            <p><span class="label">GeoLocation</span>:${temple.location}`)
-            // append the info to the card
-            card.appendChild(info);
-
-            // more importantly append the card  to the parent container which is of class dynamic-temples
-            imgContainer.appendChild(card);
-        })
+        if(typeof dataItem == temples){
+        info.innerHTML = `<p><span class="label">Name</span>: ${item.name}
+        <p><span class="label">President</span>: ${item.President}
+        <p><span class="label">Wife</span>: ${item.wife}
+        <p><span class="label">Location</span>: ${item.geoLocation}
+        <p><span class="label">Area</span>: ${item.area}`
+        }
+        else if(typeof dataItem == missions){
+        info.innerHTML = `<p><span class="label">Name</span>: ${item.name}
+        <p><span class="label">President</span>: ${item.President}
+        <p><span class="label">Wife</span>: ${item.wife}
+        <p><span class="label">Geo-Location</span>: ${item.geoLocation}`
+        }
         
-        document.querySelector("#temples").addEventListener("click", () => {
-            createTempleCards(temples);
-        })
+        card.appendChild(image);
+        card.appendChild(info);
+
+        container.appendChild(card);
+    })
+
+    const pageTitle = querySelector("#page-title");
+    if(pageTitle.textContent ==="Missions", "missions-container"){
+        createCards(missions);
+    }
+    else if(pageTitle.textContent === "Temples"){
+        createCards(temples, "dynamic-temples");
+    };
 }
