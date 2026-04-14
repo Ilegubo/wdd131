@@ -5,3 +5,4 @@ button.addEventListener("click", () => {
     button.classList.toggle("open")
     navMenu.classList.toggle("open")
 })
+

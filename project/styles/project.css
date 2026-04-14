@@ -17,9 +17,10 @@
         border:none;
         border-radius: 6px;
         position: relative;
-        /* max-height: 50px; */
     }
-
+    /* header {
+        position: fixed;
+    } */
     header h2 {
         text-align: center;
     }
@@ -78,4 +79,6 @@
         border-radius: 6px;
         margin: .3rem;
     }
+
+
 }
