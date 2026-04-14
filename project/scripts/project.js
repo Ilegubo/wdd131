@@ -91,7 +91,37 @@ const temples = [
     }    
 ]
 
-// function to create temples/missions cards
+const mtc = [
+    {
+        name : "Ghana Missionary Training Centre",
+        president: "J. Benoit Duquette",
+        wife: "Diane Duquette",
+        geoLocation: "Accra Cantonments",
+        created: "2002/2017",
+        area : null,
+        imageUrl: "images/mtc.webp"
+    },
+    {
+        name : "Ghana Missionary Training Centre",
+        president: "J. Benoit Duquette",
+        wife: "Diane Duquette",
+        geoLocation: "Accra Cantonments",
+        created: "2002/2017",
+        area : null,
+        imageUrl: "images/mtc-hall.webp"
+    },
+    {
+        name : "Ghana Missionary Training Centre",
+        president: "J. Benoit Duquette",
+        wife: "Diane Duquette",
+        geoLocation: "Accra Cantonments",
+        created: "2002/2017",
+        area : null,
+        imageUrl: "images/mtc1.webp"
+    },
+]
+
+// function to create temples/missions/mtc cards
 
 function createCards(dataItem, dataContainer){
     if (!dataContainer) return;
@@ -114,13 +144,21 @@ function createCards(dataItem, dataContainer){
             <p><span class="label">Wife</span>: ${item.wife}
             <p><span class="label">Location</span>: ${item.geoLocation}
             <p><span class="label">Area</span>: ${item.area}</div>`
-        } else {
+        } else if(dataItem == missions) {
             info.innerHTML = `<div class="caption"><p><span class="label">Name</span>: ${item.name}
             <p><span class="label">President</span>: ${item.president}
             <p><span class="label">Wife</span>: ${item.wife}
             <p><span class="label">Geo-Location</span>: ${item.geoLocation}
             </div>`
         }
+        else if(dataItem == mtc){
+            info.innerHTML = `<div class="caption"><p><span class="label">Name</span>: ${item.name}
+            <p><span class="label">President</span>: ${item.president}
+            <p><span class="label">Wife</span>: ${item.wife}
+            <p><span class="label">Geo-Location</span>: ${item.geoLocation}
+            </div>`
+        }
+
 
         card.appendChild(image);
         card.appendChild(info);
@@ -135,5 +173,8 @@ if (pageTitle) {
         createCards(missions, "#missions-container");
     } else if (pageTitle.textContent.trim() === "Temples") {
         createCards(temples, ".dynamic-temples");
+    }
+    else if (pageTitle.textContent.trim() === "MTC"){
+        createCards(mtc, "#mtc")
     }
 }
