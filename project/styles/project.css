@@ -3,20 +3,37 @@
     --secondary-col: hsl(204, 62%, 49%);
     --tert-yellow: hsl(45, 94%, 61%);
     --dark-green: hsl(180, 25%, 25%);
+    --sec-blue: hsl(195, 53%, 79%);
+    --black: hsl(0, 0%, 0%);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 @media screen and (max-width: 575px ) {
+    /* Home page Starter Works */
     header h1 {
         background-color: var(--primary-col);
         color: white;
         text-align: left;
         font-weight: bold;
-        padding: .1rem .1rem .1rem .3rem;
+        padding: .1rem .1rem .1rem .6rem;
         margin: .3rem;
         border:none;
         border-radius: 6px;
         position: relative;
+    }
+    #page-title {
+        font-weight: 20;
+        font-size: small;
+        position: absolute;
+        top: 1rem;
+        right: 5rem;
+        border: 2px solid var(--tert-yellow);
+        padding: .1rem .3rem;
+        border-radius: 6px;
+        background-color: var(--secondary-col);
+        width: 5rem;
+        text-align: center;
+        color: rgb(0, 0, 0);
     }
     /* header {
         position: fixed;
@@ -43,7 +60,7 @@
     }
     #navmenu a {
         text-decoration: none;
-        color: black;
+        color: var(--black);
         display: none;
     }
     #navmenu.open {
@@ -68,7 +85,22 @@
         max-width: 95%;
     }
     main {
-        min-height: 600px;
+        min-height: 400px;
+        max-width: 470px;
+        margin: .1rem auto;
+    }
+    h3 {
+        text-align: center;
+        max-width: 70%;
+        background-color: lightblue;
+        padding: .2rem 1rem;
+        margin: .1rem auto;
+        border: 2px solid darkblue;
+        border-radius: 6px;
+    }
+    p {
+        text-wrap: pretty;
+        
     }
         footer {
         background-color: var(--primary-col);
@@ -78,7 +110,9 @@
         min-height: 1.5rem;
         border-radius: 6px;
         margin: .3rem;
+        font-weight: bold;
     }
+
 
 
 }
