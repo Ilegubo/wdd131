@@ -75,14 +75,18 @@
         background-color: var(--tert-yellow);
         border-radius: 6px;
         padding: .5rem;
-        font-weight: bold;
+        font-weight: 450;
+        width: 10.5rem;
     }
     #menu.open::before {
         content: "❌"
     }
     #navmenu.open a {
         display: block;
-
+        margin: .3rem
+    }
+    #navmenu.open a:hover {
+        font-weight: bold;
     }
 
     body {
