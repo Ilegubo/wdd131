@@ -11,7 +11,7 @@ button.addEventListener("click", () => {
 const missions = [
     {
         name : "Ghana Accra East Mission",
-        president : "Ben Beeeson",
+        president : "Ben Beeson",
         wife : "Julynn Beeson",
         imageURL: "",
         geoLocation: "Accra",
@@ -64,14 +64,14 @@ const missions = [
 const temples = [
     {
         templeName: "Ghana Accra",
-        location: "Cantonements",
+        location: "Cantonments",
         dedicated: "2004, January, 11",
         area: 17500,
         imageUrl: "images/accra-ghana-temple.jpg"
     },
     {
         templeName: "Ghana Kumasi",
-        location: "Y11 Suntreso Raod, Bantama Kumasi",
+        location: "Y11 Suntreso Road, Bantama Kumasi",
         dedicated: "Still Under Construction",
         area: 17500,
         imageUrl: "images/accra-ghana-temple.jpg"
@@ -110,5 +110,12 @@ function createTempleCards(temples){
             <p><span class="label">GeoLocation</span>:${temple.location}`)
             // append the info to the card
             card.appendChild(info);
+
+            // more importantly append the card  to the parent container which is of class dynamic-temples
+            imgContainer.appendChild(card);
+        })
+        
+        document.querySelector("#temples").addEventListener("click", () => {
+            createTempleCards(temples);
         })
 }
