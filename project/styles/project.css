@@ -16,6 +16,7 @@
         margin: .3rem;
         border:none;
         border-radius: 6px;
+        position: relative;
         /* max-height: 50px; */
     }
 
@@ -32,7 +33,7 @@
         width: 2rem;
         padding: .5rem .1rem;
         position: absolute;
-        top: .9rem;
+        top: .72rem;
         right: 1.5rem;
     }
 
@@ -44,16 +45,29 @@
         color: black;
         display: none;
     }
-    #navmenu {
-        display: flex;
-        flex-direction: column;
+    #navmenu.open {
+        position: absolute;
+        top: 2.5rem;
+        right: .9rem;
+        background-color: var(--tert-yellow);
+        border-radius: 6px;
+        padding: .5rem;
+        font-weight: bold;
     }
-    .navmenu.open a::before{
+    #menu.open::before {
         content: "❌"
     }
-    .navmenu.open a {
+    #navmenu.open a {
         display: block;
 
+    }
+
+    body {
+        margin: 0 auto;
+        max-width: 95%;
+    }
+    main {
+        min-height: 600px;
     }
         footer {
         background-color: var(--primary-col);
@@ -62,6 +76,6 @@
         text-align: center;
         min-height: 1.5rem;
         border-radius: 6px;
+        margin: .3rem;
     }
-
 }
