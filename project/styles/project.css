@@ -109,6 +109,15 @@
         text-wrap: pretty;
         
     }
+    /* css for rendered images */
+    #missions-container {
+        background-color: bisque;
+        
+    }
+
+    img {
+        max-width: 300px;
+    }
         footer {
         background-color: var(--primary-col);
         color: white;
@@ -119,7 +128,4 @@
         margin: .3rem;
         font-weight: bold;
     }
-
-
-
 }

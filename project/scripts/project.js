@@ -94,8 +94,9 @@ const temples = [
 // function to create temples/missions cards
 
 function createCards(dataItem, dataContainer){
-    const container = document.querySelector(dataContainer)
     if (!dataContainer) return;
+    const container = document.querySelector(dataContainer);
+    if (!container) return;
     container.innerHTML = "";
 
     dataItem.forEach(item => {
@@ -103,35 +104,35 @@ function createCards(dataItem, dataContainer){
         const image = document.createElement("img");
         const info = document.createElement("figcaption");
 
-        image.setAttribute("src", item.imgUrl)
-        image.setAttribute("alt", img.name);
-        image.setAttribute("loading","lazy");
-        
-        if(typeof dataItem == temples){
-        info.innerHTML = `<p><span class="label">Name</span>: ${item.name}
-        <p><span class="label">President</span>: ${item.President}
-        <p><span class="label">Wife</span>: ${item.wife}
-        <p><span class="label">Location</span>: ${item.geoLocation}
-        <p><span class="label">Area</span>: ${item.area}`
+        image.setAttribute("src", item.imageUrl);
+        image.setAttribute("alt", item.name);
+        image.setAttribute("loading", "lazy");
+
+        if (dataItem === temples) {
+            info.innerHTML = `<p><span class="label">Name</span>: ${item.name}
+            <p><span class="label">President</span>: ${item.president}
+            <p><span class="label">Wife</span>: ${item.wife}
+            <p><span class="label">Location</span>: ${item.geoLocation}
+            <p><span class="label">Area</span>: ${item.area}`
+        } else {
+            info.innerHTML = `<p><span class="label">Name</span>: ${item.name}
+            <p><span class="label">President</span>: ${item.president}
+            <p><span class="label">Wife</span>: ${item.wife}
+            <p><span class="label">Geo-Location</span>: ${item.geoLocation}`
         }
-        else if(typeof dataItem == missions){
-        info.innerHTML = `<p><span class="label">Name</span>: ${item.name}
-        <p><span class="label">President</span>: ${item.President}
-        <p><span class="label">Wife</span>: ${item.wife}
-        <p><span class="label">Geo-Location</span>: ${item.geoLocation}`
-        }
-        
+
         card.appendChild(image);
         card.appendChild(info);
 
         container.appendChild(card);
     })
+}
 
-    const pageTitle = querySelector("#page-title");
-    if(pageTitle.textContent ==="Missions", "missions-container"){
-        createCards(missions);
+const pageTitle = document.querySelector("#page-title");
+if (pageTitle) {
+    if (pageTitle.textContent.trim() === "Missions") {
+        createCards(missions, "#missions-container");
+    } else if (pageTitle.textContent.trim() === "Temples") {
+        createCards(temples, ".dynamic-temples");
     }
-    else if(pageTitle.textContent === "Temples"){
-        createCards(temples, "dynamic-temples");
-    };
 }
