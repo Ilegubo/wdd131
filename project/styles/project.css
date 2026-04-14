@@ -33,13 +33,11 @@
         padding: .1rem .3rem;
         border-radius: 6px;
         background-color: var(--secondary-col);
-        width: 8rem;
+        min-width: 4rem;
         text-align: center;
         color: rgb(0, 0, 0);
     }
-    /* header {
-        position: fixed;
-    } */
+
     header h2 {
         text-align: center;
         font-size: 22px;
@@ -83,7 +81,7 @@
     }
     #navmenu.open a {
         display: block;
-        margin: .3rem
+        margin: .3rem;
     }
     #navmenu.open a:hover {
         font-weight: bold;
