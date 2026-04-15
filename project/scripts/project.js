@@ -175,6 +175,12 @@ if (pageTitle) {
         createCards(temples, ".dynamic-temples");
     }
     else if (pageTitle.textContent.trim() === "MTC"){
-        createCards(mtc, "#mtc")
+        createCards(mtc, "#mtc-container")
     }
 }
+
+
+const getDate = new Date(document.lastModified);
+document.querySelector("#year").textContent = getDate.getFullYear();
+document.querySelector("#last-modified").textContent = getDate;
+
