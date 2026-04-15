@@ -1,0 +1,91 @@
+* {
+    --primary-col: hsl(349, 67%, 56%);
+    --secondary-col: hsl(204, 62%, 49%);
+    --tert-yellow: hsl(45, 94%, 61%);
+    --dark-green: hsl(180, 25%, 25%);
+    --sec-blue: hsl(195, 53%, 79%);
+    --black: hsl(0, 0%, 0%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0
+}
+
+@media screen and (min-width: 576px){
+    header {
+        display: flex;
+        justify-content: space-around;
+        background-color: var(--primary-col);  
+        margin: 1rem;      
+        padding: .5rem;
+        border-radius: 6px;
+        color: white;
+    }
+    #missions, #home, #mtc #temples {
+        margin: 0 .5rem;
+    }
+    #page-title, menu, button {
+        display: none
+    }
+    nav {
+        max-width: 330px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: .75rem;
+    }
+    nav ul {
+        display: grid;
+        justify-content: space-around;
+        list-style-type: none;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    nav a {
+        text-decoration: none;
+        color: var(--black);
+        font-weight: bold;
+        padding: .5rem;
+        border-radius: 6px;
+        color: white;
+    }
+    nav a:hover {
+        border: 1px solid var(--tert-yellow);
+        background-color: var(--sec-blue);
+        color: var(--black);
+    }
+    
+    main {
+        max-width: 95%;
+        margin: 0 auto;
+        min-height: 400px;
+    }
+    h2 {
+        text-align: center;
+    }
+    h3 {
+        background-color: var(--sec-blue);
+        padding: .7rem;
+        margin: 1rem 0 .5rem 27%;
+        width: 350px;
+        text-align: center;
+        border-radius: 6px;
+    }
+
+    .language, .time, .food {
+        font-weight: bold;
+    }
+
+    .missions, .mtc-p {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    footer {
+        background-color: var(--primary-col);
+        padding: .5rem;
+        text-align: center;
+        max-width: 95%;
+        margin: 1rem auto;
+        border-radius: 6px;
+        color: white;
+        min-height: 60px;
+    }
+}

@@ -39,7 +39,7 @@
         color: rgb(0, 0, 0);
     }
 
-    header h2 {
+    h2 {
         text-align: center;
         font-size: 22px;
         max-width: 450px;
@@ -135,11 +135,13 @@
         width: 100%;
         max-width: 400px;
         margin: 0 auto;
-
     }
 
     img {
         max-width: 270px;
+    }
+    .language, .time, .food {
+        font-weight: bold;
     }
         footer {
         background-color: var(--primary-col);
