@@ -1,5 +1,5 @@
 * {
-    --primary-col: hsl(349, 67%, 56%);
+    --primary-col: hsl(349, 56%, 57%);
     --secondary-col: hsl(204, 62%, 49%);
     --tert-yellow: hsl(45, 94%, 61%);
     --dark-green: hsl(180, 25%, 25%);
@@ -13,7 +13,7 @@
     /* Home page Starter Works */
     header h1 {
         background-color: var(--primary-col);
-        color: white;
+        color: var(--black);
         text-align: left;
         font-weight: bold;
         padding: .5rem .1rem .1rem .6rem;
@@ -145,7 +145,7 @@
     }
         footer {
         background-color: var(--primary-col);
-        color: white;
+        color: var(--black);
         padding: .5rem;
         text-align: center;
         min-height: 1.5rem;
