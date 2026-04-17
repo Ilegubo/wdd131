@@ -1,10 +1,15 @@
-const button = document.querySelector("#menu");
+try{
+    const button = document.querySelector("#menu");
 const navMenu = document.querySelector("#navmenu");
 
 button.addEventListener("click", () => {
     button.classList.toggle("open")
     navMenu.classList.toggle("open")
 })
+} catch (error) {
+    console.log(error)
+};
+
 
 // For the missions page
 // object for missions card
@@ -184,3 +189,26 @@ const getDate = new Date(document.lastModified);
 document.querySelector("#year").textContent = getDate.getFullYear();
 document.querySelector("#last-modified").textContent = getDate;
 
+
+const webpages = [
+    {
+        pageName:"Home page",
+    },
+     {
+        pageName:"Missions page",
+    },
+     {
+        pageName:"Temples page",
+    },
+     {
+        pageName:"Mtc page",
+    },
+    
+]
+
+webpages.forEach(page => {
+    const option = document.createElement("option");
+    option.value = page.pageName;
+    option.textContent = page.pageName;
+    document.querySelector("#pname").appendChild(option);
+});

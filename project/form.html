@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Purchase Form</title>
+    <meta name="description"
+        content="A form to collect data about purchase of products and also provide review of products">
+    <meta name="author" content="Ilegubo Kofi Owusu">
+    <link rel="stylesheet" href="styles/project-large.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles/project.css" media="print" onload="this.media='all'">
+
+    <link rel="stylesheet" href="styles/project.css" media="print" onload="this.media='all'">
+
+    <script src="scripts/project.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>WEBSITE REVIEW</h1>
+    </header>
+    <main>
+        <form method="get" action="thanks.html" id="feedback">
+            <fieldset>
+                <label for="pname">Page
+                    <select id="pname" name="pname" required>
+                        <option disabled selected value="">Select a Page...</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset id="product-rating">
+                <legend>Rate my website</legend>
+                <div class="product-rating">What would your rate this site?
+                    <label for="onestar"><input type="radio" id="onestar" name="prating" value="onestar"
+                            required>&star;</label>
+                    <label for="twostar"><input type="radio" name="prating" value="twostar" id="twostar"
+                            required>&star;&star;</label>
+                    <label for="threestar"><input type="radio" name="prating" id="threestar" value="threestar"
+                            required>&star;&star;&star;</label>
+                    <label for="fourstar"><input type="radio" name="prating" id="fourstar" value="fourstar"
+                            required>&star;&star;&star;&star;</label>
+                    <label for="fivestar"><input type="radio" name="prating" id="fivestar" value="fivestar"
+                            required>&star;&star;&star;&star;&star;</label>
+                </div>
+            </fieldset>
+
+            <!-- <fieldset>
+                <label for="installationDate">Installation Date* <input type="date" id="installationDate"
+                        name="installationDate" required>
+                </label>
+            </fieldset> -->
+
+            <fieldset id="useful-info">
+                <legend>Useful Info</legend>
+                <label for="homePage"><input type="checkbox" name="usefulInfo" value="homepage">Home Page</label>
+                <label for="missionsPage"><input type="checkbox" name="usefulInfo" value="missionsPage">Missions Page</label>
+                <label for="templesPage"><input type="checkbox" name="usefulInfo" value="templesPage">Home Page</label>
+                <label for="mtc"><input type="checkbox" name="usefulInfo" value="mtc">MTC Page</label>
+            </fieldset>
+
+            <fieldset class="written-review">
+                <legend>Review Section</legend>
+                <label for="writtenReview">Review
+                    <textarea id="writtenReview" name="writtenReview" placeholder="Write a review" rows="5"
+                        cols="50"></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset id="reviewer-name">
+                <label for="userName">Name
+                    <input type="text" id="userName" name="userName">
+                </label>
+            </fieldset>
+
+            <input type="submit" id="submitEntries" value="Submit My Recommendations">
+
+        </form>
+    </main>
+    <footer>
+        <p>&copy;<span id="year"></span>⚽Ilegubo Kofi Owusu ⚽ Accra-Ghana</p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+
+</html>
